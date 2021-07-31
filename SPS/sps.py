@@ -56,7 +56,8 @@ class ResultWrite:
     def file_write(result):
         with open('result.txt', 'a', encoding='utf-8') as f:
             f.write(f'{result}\n')
-
+        # with open('result.txt', 'r', encoding='utf-8') as f:
+        #     print(f.read())
 
 class Run:
     @staticmethod
@@ -79,5 +80,7 @@ class Run:
                 print('Спасибо за игру!')
                 break
 
+        with open('result.txt', 'r', encoding='utf-8') as f:
+            print(f.read())
 
 Run().run_game()
